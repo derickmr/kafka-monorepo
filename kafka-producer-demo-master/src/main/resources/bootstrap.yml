@@ -1,0 +1,17 @@
+spring:
+  main:
+    banner-mode: "off"
+
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: 192.168.15.31:9092
+          autoCreateTopics: false
+      bindings:
+        carrinho-compras-v1:
+          destination: carrinho-compras-v1
+          group: gruopo1
+          contentType: application/json
+server:
+  port: 8081
